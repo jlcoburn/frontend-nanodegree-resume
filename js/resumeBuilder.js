@@ -3,7 +3,7 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-    'name' : 'Jason Lewis Coburn The Fifth',
+    'name' : 'Jason Coburn',
     "role" : "Front End Developer",
     "contact"  : {
         "email" : "jlcoburn@live.com",
@@ -149,19 +149,15 @@ function logClicks(x,y, timeStamp) {
 }
 
 function inName() {
-    name = bio.name.trim().split(" ");
-    console.log(name);
-    //console.log("First name: " + name[0] + " Last Name: " + name[1]);
-    name[1] = name[1].toUpperCase();
-    console.log(name[1]);
-    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-    console.log(name[0]);
-    return name[0] + " " + name[1];
+    var fullName = bio.name.trim().split(" ");
+    var firstName = fullName[0];
+    var lastName = fullName[1];
+    lastName = lastName.toUpperCase();
+    firstName = firstName.slice(0,1).toUpperCase() + firstName.slice(1).toLowerCase();
+    return firstName + " " + lastName;
 }
 
 displayHeader();
 displayWork();
 displaySkills();
 $("#main").append(internationalizeButton);
-
-
