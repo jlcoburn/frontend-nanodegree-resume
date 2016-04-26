@@ -3,7 +3,7 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 var bio = {
-    'name' : 'Jason Coburn',
+    'name' : 'Jason Lewis Coburn The Fifth',
     "role" : "Front End Developer",
     "contact"  : {
         "email" : "jlcoburn@live.com",
@@ -122,6 +122,7 @@ function displaySkills() {
 
 
 
+
 //Section to display contact information in footer
 var formattedEmail = HTMLemail.replace("%data%",bio.contact.email);
 var formattedGithub = HTMLgithub.replace("%data%",bio.contact.github);
@@ -141,15 +142,26 @@ function displayHeader() {
     $("#header").prepend(formattedName);
 }
 
-function logClicks(x,y) {
+function logClicks(x,y, timeStamp) {
     console.log("X pos: ", x);
     console.log("Y pos: ", y);
+    console.log("Time", timeStamp);
+}
+
+function inName() {
+    name = bio.name.trim().split(" ");
+    console.log(name);
+    //console.log("First name: " + name[0] + " Last Name: " + name[1]);
+    name[1] = name[1].toUpperCase();
+    console.log(name[1]);
+    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+    console.log(name[0]);
+    return name[0] + " " + name[1];
 }
 
 displayHeader();
 displayWork();
 displaySkills();
+$("#main").append(internationalizeButton);
 
-$(document).click(function(loc) {
-    logClicks(loc.pageX, loc.pageY)
-});
+
