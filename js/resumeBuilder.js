@@ -97,7 +97,7 @@ var projects = {
 
 //Section to display Work History
 work.display = function() {
-    for(job in work.jobs)
+    for(var job in work.jobs)
     {
         $('#workExperience').append(HTMLworkStart);
         var formattedEmployer = HTMLworkEmployer.replace('%data%',work.jobs[job].employer);
@@ -112,7 +112,7 @@ work.display = function() {
         $('.work-entry:last').append(formattedLocation);
         $('.work-entry:last').append(formattedDescription);
     }
-}
+};
 
 //Section to display header information
 bio.displayHeader = function() {
@@ -157,7 +157,7 @@ bio.displayHeader = function() {
 
 
 
-}
+};
 
 /*function logClicks(x,y, timeStamp) {
     console.log('X pos: ', x);
@@ -178,7 +178,7 @@ bio.displayHeader = function() {
 
 
 education.display = function() {
-    for (course in education.online_courses) {
+    for (var course in education.online_courses) {
         $('#onlineCourse').append(HTMLonlineStart);
 
         var formattedTitle = HTMLonlineTitle.replace('%data%', education.online_courses[course].title);
@@ -195,7 +195,7 @@ education.display = function() {
         $('.onlineCourse-entry:last').append(formattedUrl);
     }
 
-    for (school in education.schools) {
+    for (var school in education.schools) {
         $('#education').append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace('%data%', education.schools[school].name);
@@ -211,11 +211,11 @@ education.display = function() {
         $('.education-entry:last').append(formattedDates);
     }
 
-}
+};
 
 projects.display = function() {
 
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
 
         $('#projects').append(HTMLprojectStart);
 
@@ -228,7 +228,7 @@ projects.display = function() {
         var formattedDates = HTMLprojectDates.replace('%data%',projects.projects[project].dates_worked);
         $('.project-entry:last').append(formattedDates);
 
-        for (image in projects.projects[project].images) {
+        for (var image in projects.projects[project].images) {
             var formattedImage = HTMLprojectImage.replace('%data%',projects.projects[project].images[image]);
             $('.project-entry:last').append(formattedImage);
         }
@@ -237,7 +237,7 @@ projects.display = function() {
 
 
     }
-}
+};
 
 bio.displayHeader();
 work.display();
