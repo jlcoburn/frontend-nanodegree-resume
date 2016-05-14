@@ -12,6 +12,7 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
+
 }
 
 .clear-fix {
@@ -66,15 +67,19 @@ h5 {
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #808080;
+  color: #565051;
   line-height: 16px;
   float: left;
+}
+
+.project-date-text {
+  float: right;
 }
 
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #5c5858;
   line-height: 16px;
   float: right;
 
@@ -87,10 +92,24 @@ p {
 }
 
 a {
-  color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
-  display: block;
+ margin-top: 10px;
+ display: block;
+}
+
+a.contactLink{
+  text-decoration:none;
+  margin-top:10px;
+  display: initial;
+}
+
+
+a:link{
+  color:MidnightBlue;
+}
+
+a:visited{
+  color:red;
 }
 
 .welcome-message {
@@ -118,7 +137,7 @@ a {
   color: #fff;
 }
 
-.middleGray {
+/*.middleGray {
   background-color: #a7a6a6;
   padding-bottom: 10px;
   clear: both;
@@ -145,10 +164,20 @@ a {
 .dark-gray {
   background-color: #4a4a4a;
 }
-
+*/
 /* TODO: Replace with image later */
-#header {
+
+/*#header {
   background-color: #808080;
+}*/
+
+body {
+    background: gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#484848, #D8D8D8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#484848, #D8D8D8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#484848, #D8D8D8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#484848 , #D8D8D8); /* Standard syntax */
+
 }
 
 .flex-box {
@@ -206,9 +235,6 @@ span {
     margin-top: 10%;
   }
 
-  #mapDiv {
-    display: none;
-  }
   .biopic {
     width: 150px;
   }
