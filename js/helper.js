@@ -30,7 +30,7 @@ var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<div class="work-title"> %data%';
+var HTMLworkEmployer = '<div class="work-title"><em> %data%</em>';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
@@ -43,16 +43,16 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<div class="education-title">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolName = '<div class="education-title"><em>%data%</em>';
+var HTMLschoolDegree = ' -- %data%';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>&nbspMajor: %data%</em>';
 
 var HTMLonlineStart = '<div class="onlineCourse-entry"></div>';
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<div class="education-title">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineTitle = '<div class="education-title"><em>%data%</em>';
+var HTMLonlineSchool = '<em><br>&nbsp%data%</em>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="%data%">%data%</a>';
 
